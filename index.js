@@ -7,7 +7,7 @@ require('dotenv').config();
 
 // byOO467TRPBvBFYB
 // const uri = ' mongodb://127.0.0.1:27017/';
-const uri = 'mongodb+srv://facebook:byOO467TRPBvBFYB@cluster0.zkkoe.mongodb.net/facebook?retryWrites=true&w=majority'
+const uri = `mongodb+srv://${process.env.DB_USER}:${DB_PASS}@cluster0.zkkoe.mongodb.net/facebook?retryWrites=true&w=majority`
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
