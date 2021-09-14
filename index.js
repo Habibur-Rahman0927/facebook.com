@@ -1,10 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const MongoClient = require('mongodb').MongoClient;
+require('dotenv').config();
+
 
 // byOO467TRPBvBFYB
-const MongoClient = require('mongodb').MongoClient;
-const ObjectId = require('mongodb').ObjectId;
 // const uri = ' mongodb://127.0.0.1:27017/';
 const uri = 'mongodb+srv://facebook:byOO467TRPBvBFYB@cluster0.zkkoe.mongodb.net/facebook?retryWrites=true&w=majority'
 
@@ -28,4 +29,4 @@ client.connect(err => {
 
 
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000);
